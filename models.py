@@ -29,9 +29,11 @@ class ScoredPost:
         return self.info.content
 
     @property
-    def created_at(self) -> str:
-        return self.info.created_at.strftime("%Y-%m-%d %H:%M")
-
-    @property
-    def media(self) -> list:
-        return self.info.media_attachments
+    def media(self) -> str:
+        medias = []
+        for media in self.info.media_attachments:
+            if media.type == 'image':
+                medias.append(f'<img src={media.url}></img>')
+            elif media.type == 'gifv':
+                medias.append(f'<video src={media.url} autoplay="true" loop="true"></video>')
+        return '\n'.join(medias)

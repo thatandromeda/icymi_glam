@@ -8,7 +8,7 @@
       <div class="avatar"><a target="_blank" href="{{ post.account['url'] }}"><img src="{{ post.account['avatar'] }}"></a></div>
       <div class="content">
 	<div class="user"><a target="_blank" href="{{ post.account['url'] }}"><span class="displayname">{{ post.account['display_name'] }}</span><span class="username">@{{ post.account['username'] }}</span></a></div>
-	<div class="status">{{ post.content }}</div>
+	<div class="status">{{ post.content }}{{ post.media }}</div>
       </div>
     </div>
 </div>
