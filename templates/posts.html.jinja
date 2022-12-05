@@ -4,6 +4,13 @@
     <span class="link-divider"> | </span>
     <a class="original-link" href="{{ post.url }}" target="_blank">Original Link</a>
     <br />
-    <iframe src="{{ post.url }}/embed" class="mastodon-embed" allowfullscreen="allowfullscreen" width="400"></iframe>
+    <div class="toot">
+      <div class="avatar"><a target="_blank" href="{{ post.account['url'] }}"><img src="{{ post.account['avatar'] }}"></a></div>
+      <div class="content">
+	<div class="user"><a target="_blank" href="{{ post.account['url'] }}"><span class="displayname">{{ post.account['display_name'] }}</span><span class="username">@{{ post.account['username'] }}</span></a></div>
+	<div class="status">{{ post.content }}`</div>
+	<div class="date"><a target="_blank" href="{{ post.url }}">★ {{ post.account['created_at'] }}</a></div>
+      </div>
+    </div>`
 </div>
 {% endfor %}

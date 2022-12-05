@@ -20,3 +20,18 @@ class ScoredPost:
     def get_score(self, scorer: Scorer) -> float:
         return scorer.score(self)
 
+    @property
+    def account(self) -> dict:
+        return self.info.account
+
+    @property
+    def content(self) -> str:
+        return self.info.content
+
+    @property
+    def created_at(self) -> str:
+        return self.info.created_at.strftime("%Y-%m-%d %H:%M")
+
+    @property
+    def media(self) -> list:
+        return self.info.media_attachments

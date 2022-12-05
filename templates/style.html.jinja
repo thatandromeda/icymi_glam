@@ -1,72 +1,100 @@
 <style>
 
-    body {
-        background-color: #292c36;
-        font-family: "Arial", sans-serif;
-    }
+  body {
+      background-color: #f9f9f9;
+      color: #3e3d41;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+  }
 
-    div#container {
-        margin: auto;
-        max-width: 640px;
-        padding: 10px;
-        text-align: center;
-    }
+  #render-description, #scorer, #threshold {
+      opacity: .7;
+      font-size: .9em;
+  }
 
-    div.post {
-        margin-top: 20px;
-    }
+  #render-description span, #scorer span, #threshold span {
+      font-weight: bold;
+  }
 
-    h1 {
-        color: white;
-    }
+  #container {
+      width: 100%;
+      max-width: 900px;
+      flex-direction: column;
+      margin: 10px;
+      line-height: 1.5;
+  }
 
-    h2 {
-        color: white;
-    }
-
-    a.home-link {
-        color: white;
-    }
-
-    a.original-link {
-        color: white;
-    }
-
-    span.link-divider {
-        color: white;
-    }
-
-    span#render-description {
-        color: #D3D3D3;
-    }
-
-    span#scorer {
-        color: #D3D3D3;
-    }
-
-    span#scorer-value {
-        font-weight: bold;
-    }
-
-    span#threshold {
-        color: #D3D3D3;
-    }
-
-    span#threshold-value {
-        font-weight: bold;
-    }
-
-    span#rendered-value {
-        font-weight: bold;
-    }
-
-    span#hours-value {
-        font-weight: bold;
-    }
-
-    iframe.mastodon-embed {
-        max-width: 100%;
-        border: 0;
-    }
+  .toot {
+      padding: 18px 20px;
+      border: 1px solid #E6E3E1;
+      border-radius: 5px;
+      display: flex;
+      flex-start: left;
+      margin: 15px;
+      box-shadow: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.030), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
+  }
+  .avatar {
+      max-width: 64px;
+      min-width: 64px;
+      height: 64px;
+  }
+  .avatar img {
+      max-width: 100%;
+      border-radius: 50%;
+  }
+  .content {
+      color: #3e3d41;
+      font-size: 14px;
+      margin-left: 20px;
+      padding: 10px 0px;
+  }
+  .content p {
+      max-width: none;
+      margin: 5px 0px;
+  }
+  .post a, .content a {
+      color: #5d4f84;
+  }
+  .content a:hover {
+      color: #4d54d1;
+  }
+  .content a span {
+  }
+  .content .invisible {
+      opacity: .7;
+  }
+  .status a:not(.hashtag):not(.mention) span:not(.invisible){
+      font-weight: bold
+  }
+  .username {
+      opacity: .9;
+      font-weight: normal;
+  }
+  .home-link, .original-link, a.hashtag, a.mention {
+      text-decoration: none;
+      opacity: .8;
+      background-color: #e9e9f5;
+      padding: 0 5px;
+      border-radius: 5px;
+  }
+  .status img, .status video {
+      max-width: 100%;
+      max-height: 500px;
+  }
+  .user span {
+      padding: 0px 2px;
+  }
+  .displayname {
+      font-weight: bold;
+      font-size: 1.2em;
+  }
+  .content .status {
+      padding: 10px 0px;
+  }
+  .date a {
+      color: #3e3d41;
+      opacity: .6
+  }
 
 </style>
