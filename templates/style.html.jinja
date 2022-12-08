@@ -32,8 +32,7 @@
       border: 1px solid #E6E3E1;
       border-radius: 10px;
       display: flex;
-      flex-start: left;
-      margin: 15px;
+      margin: 15px 0px;
       box-shadow: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.030), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
   }
 
@@ -42,10 +41,11 @@
   }
 
   .avatar {
-      max-width: 64px;
-      min-width: 64px;
-      height: 64px;
+      max-width: 56px;
+      min-width: 56px;
+      height: 56px;
   }
+  
   .avatar img {
       max-width: 100%;
       border-radius: 50%;
@@ -63,6 +63,7 @@
   }
 
   .username {
+      font-size: .85em;
   }
 
   .displayname {
@@ -81,6 +82,8 @@
       color: #3e3d41;
       font-size: 14px;
       padding: 15px 15px 15px 0px;
+      overflow-wrap: break-word;
+      word-break: break-word;
   }
 
   .media {
@@ -98,8 +101,13 @@
       color: #4d54d1;
   }
 
+  .ellipsis::after {
+      content: "…";
+  }
+
+  
   .content .invisible {
-      opacity: .7;
+      display: none;
   }
 
   .status a:not(.hashtag):not(.mention) span:not(.invisible){
@@ -130,7 +138,5 @@
   .footer div {
       padding-right: 10px;
   }
-
-
 
 </style>
