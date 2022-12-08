@@ -1,15 +1,50 @@
 {% for post in posts %}
+
 <div class="post">
-    <a class="home-link" href="{{ post.get_home_url(mastodon_base_url) }}" target="_blank">Home Link</a>
-    <span class="link-divider"> | </span>
-    <a class="original-link" href="{{ post.url }}" target="_blank">Original Link</a>
-    <br />
-    <div class="toot">
-      <div class="avatar"><a target="_blank" href="{{ post.account['url'] }}"><img src="{{ post.account['avatar'] }}"></a></div>
-      <div class="content">
-	<div class="user"><a target="_blank" href="{{ post.account['url'] }}"><span class="displayname">{{ post.account['display_name'] }}</span><span class="username">@{{ post.account['username'] }}</span></a></div>
-	<div class="status">{{ post.content }}{{ post.media }}</div>
-      </div>
+  
+  <div class="avatar">
+    <a target="_blank" href="{{ post['account_url'] }}">
+      <img src="{{ post['account_avatar'] }}">
+    </a>
+  </div>
+
+  <div class="status">  
+    <div class="user">
+      <a target="_blank" href="{{ post['account_url'] }}">
+	<span class="displayname">{{ post['display_name'] }}</span>
+	<span class="username">@{{ post['username'] }}</span>
+      </a>
     </div>
+    
+    <div class="status_content">
+      <div class="content">
+	{{ post['content'] }}
+      </div>
+     {% if post['media'] %}
+      <div class="media">
+	{{ post['media'] }}
+      </div>
+     {% endif %}
+    </div>
+
+    <div class="footer">
+
+      <div class="date">{{ post['created_at']}} UTC</div>
+      
+      <div class="links">
+	{{ post['home_link'] }}
+	{{ post['original_link'] }}
+      </div>
+      
+      <div class="reactions">
+	<span>⥄ {{post['replies_count']}}</span>
+	<span>◌ {{post['reblogs_count']}}</span>
+	<span>★ {{post['favourites_count']}}</span>
+      </div>
+      
+    </div>
+    
+  </div>
 </div>
+
 {% endfor %}

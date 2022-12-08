@@ -13,6 +13,7 @@ from mastodon import Mastodon
 from api import fetch_posts_and_boosts
 from scorers import get_scorers
 from thresholds import get_threshold_from_name, get_thresholds
+from formatters import format_posts
 
 if TYPE_CHECKING:
     from scorers import Scorer
@@ -48,8 +49,12 @@ def run(
     posts, boosts = fetch_posts_and_boosts(hours, mst, mastodon_username)
 
     # 2. Score them, and return those that meet our threshold
-    threshold_posts = threshold.posts_meeting_criteria(posts, scorer)
-    threshold_boosts = threshold.posts_meeting_criteria(boosts, scorer)
+    threshold_posts = format_posts(
+        threshold.posts_meeting_criteria(posts, scorer),
+        mastodon_base_url)
+    threshold_boosts = format_posts(
+        threshold.posts_meeting_criteria(boosts, scorer),
+        mastodon_base_url)
 
     # 3. Build the digest
     render_digest(
