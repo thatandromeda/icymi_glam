@@ -2,8 +2,9 @@ def format_post(post, mastodon_base_url) -> dict:
     
     def format_media(media):
         formats = {
-            'image': f'<img src={media["url"]} alt={media["description"] if media["description"] != None else ""}></img>',
-            'video': f'<video src={media["url"]} controls width="100%"></video>'
+            'image': f'<div class="media"><img src={media["url"]} alt={media["description"] if media["description"] != None else ""}></img></div>',
+            'video': f'<div class="media"><video src={media["url"]} controls width="100%"></video></div>',
+            'gifv': f'<div class="media"><video src={media["url"]} autoplay loop muted playsinline width="100%"></video></div>'
         }
         if formats.__contains__(media.type):
             return formats[media.type]
