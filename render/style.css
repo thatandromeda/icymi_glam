@@ -1,49 +1,107 @@
 :root {
-    --background: #f9f9f9;
-    --text: #3e3d41;
+    --background: #edeff2;
+    --text: #55525c;
     --post-background: #fff;
     --post-border: #E6E3E1;
     --link: #5d4f84;
     --link-hover: #4d54d1;
-    --mastodon-links: #e9e9f5
+    --mastodon-links: #e9e9f5;
+    --post-decoration: #e7eaec;
 }
 
 @media (prefers-color-scheme:dark) {
     :root {
-	--background: #1c1c1c;
-	--text: #ffffff;
-	--post-background: #282c37;
+	--background: #1c1d1e;
+	--text: #d1d3d7;
+	--post-background: #2c3240;
 	--post-border: #282c37;
-    --link-hover: #c2c3ff;
-    --link: #8c8dff;
+    --link-hover: #fff;
+    --link: #9da2f0;
     --mastodon-links: #1b1f3d;
+    --post-decoration: #3e475e;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
     background-color: var(--background);
     color: var(--text);
     text-align: left;
-    display: flex;
-    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 0px 10px;
 }
-
-#render-description, #scorer, #threshold {
-    opacity: .7;
-    font-size: .9em;
-}
-
-#render-description span, #scorer span, #threshold span {
-    font-weight: bold;
-}
-
 
 #container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1400px;
     flex-direction: column;
-    margin: 10px;
     line-height: 1.6;
+    display: flex;
+	flex-direction: row;
+	column-gap: 15px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.stream {
+    width: 100%;
+    max-width: 450px;
+}
+
+.header {
+  max-width: 200px;
+  text-align: right;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+
+.header .title {
+  font-size: 2.5em;
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.run_score {
+  display: flex;
+  flex-direction: column;
+}
+
+.run_score div {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  column-gap: 3px;
+  font-size: .7em;
+}
+
+.run_time.date {
+  margin-bottom: 8px;
+  /*! font-weight: bold; */
+  font-size: .9em;
+}
+
+.meta_desc {
+  opacity: .5;
+}
+
+.stream_title{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.posts {
+    background-color: var(--background);
+    padding: 0px;
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*! gap: 15px; */
 }
 
 .post {
@@ -52,9 +110,39 @@ body {
     border: 1px solid var(--post-border);
     border-radius: 10px;
     display: flex;
-    margin: 15px 0px;
-    box-shadow: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.030), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
+    box-shadow: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.030), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 10px -10px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    max-width: 450px;
+    margin: 0px 5px 15px 5px;
 }
+
+
+.post_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+  font-size: .8em;
+}
+
+.links a {
+  background: var(--post-decoration);
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin: 0px 2px;
+  opacity: .7;
+}
+
+.links a[href] {
+    color: var(--test);
+  }
 
 .post a {
     text-decoration: none;
@@ -64,16 +152,13 @@ body {
     max-width: 56px;
     min-width: 56px;
     height: 56px;
+    margin-right: 20px;
 }
 
 .avatar img {
     max-width: 100%;
-    border-radius: 50%;
+    border-radius: 20%;
     border: 1px solid var(--post-border);
-}
-
-.status {
-    margin-left: 20px;
 }
 
 .user a {
@@ -116,10 +201,12 @@ body {
     max-width: none;
     margin: 15px 0px;
 }
+
 .post a {
     color: var(--link);
 }
-.content a:hover, .footer a:hover, .user a:hover {
+
+.content a:hover, .footer a:hover, .user a:hover, .links a[href]:hover {
     color: var(--link-hover);
 }
 
@@ -150,14 +237,51 @@ body {
     border-radius: 5px;
 }
 
-.footer {
+.post_footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
     font-size: .8em;
     opacity: .7;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 2px solid var(--post-decoration);
 }
 
-.footer div {
+.post_footer .date {
+    padding-right: 10px
+}
+
+.post_footer .reactions span {
+    padding-right: 5px
+}
+
+.post_footer div {
     padding-right: 10px;
 }
+
+
+@media (max-width: 720px) {
+    
+    .header {
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .run_score {
+        flex-direction: row;
+justify-content: center !important;
+        gap: 25px;
+    }
+}
+
+@media (min-width: 1180px) {
+    
+    .header {
+        margin-left: calc(100% - 1180px)
+    }
+    
+}
+

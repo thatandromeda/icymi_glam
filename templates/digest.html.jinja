@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mastodon Digest</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="icon.png">
+
   </head>
+
   <body>
+
     <div id="container">
+
       <div class="header">
-	<h1>Mastodon Digest</h1>
-	<span id="render-description">Rendered <span id="rendered-value">{{ rendered_at }}</span> from my timeline over the past <span id="hours-value">{{ hours }}</span> hours</span><br />
-	<span id="scorer">Scorer: <span id="scorer-value">{{ scorer }}</span></span><br />
-	<span id="threshold">Threshold: <span id="threshold-value">{{ threshold }}</span></span>
+
+        <div class="title">Mastodon Digest</div>
+
+        <div class="run_time date" data-date="{{ rendered_at }}"></div>
+        <div class="run_score">
+          <div><span class="meta_desc">for the past</span><span class="meta_data">{{ hours }} hours</span></div>
+          <div><span class="meta_data">{{ scorer.lower() }}</span><span class="meta_desc">scorer</span></div>
+          <div><span class="meta_data">{{ threshold }}</span><span class="meta_desc">threshold</span></div>
+        </div>
+        
       </div>
+
       <div class="stream">
-	<h2>Here are some popular posts you may have missed:</h2>
-	{% with posts=posts %}
-	{% include "posts.html.jinja" %}
-	{% endwith %}
-	<h2>Here are some popular boosts you may have missed:</h2>
-	{% with posts=boosts %}
-	{% include "posts.html.jinja" %}
-	{% endwith %}
+        <div class="stream_title"><span>Posts</span></div>
+        <div class="posts">
+          {% with posts=posts %}
+          {% include "posts.html.jinja" %}
+          {% endwith %}
+        </div>
       </div>
+
+      <div class="stream">
+        <div class="stream_title"><span>Boosts</span></div>
+        <div class="posts">
+          {% with posts=boosts %}
+          {% include "posts.html.jinja" %}
+          {% endwith %}
+        </div>
+      </div>
+
     </div>
+
+
+    <script type='text/javascript' src="style.js"></script>
   </body>
+
 </html>
