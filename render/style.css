@@ -116,6 +116,9 @@ body {
     margin: 0px 5px 15px 5px;
 }
 
+.status {
+	width: 100%;
+}
 
 .post_header {
   display: flex;
