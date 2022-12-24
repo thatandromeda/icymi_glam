@@ -170,7 +170,8 @@ body {
 .user a {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column
+    flex-direction: column;
+    max-width: 200px;
 }
 
 .username {
