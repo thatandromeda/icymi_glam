@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from jinja2 import Environment, FileSystemLoader
+from dotenv import load_dotenv
 from mastodon import Mastodon
 
 from api import fetch_posts_and_boosts
@@ -19,6 +20,7 @@ if TYPE_CHECKING:
     from scorers import Scorer
     from thresholds import Threshold
 
+load_dotenv()
 
 def render_digest(context: dict, output_dir: Path) -> None:
     environment = Environment(loader=FileSystemLoader("templates/"))
