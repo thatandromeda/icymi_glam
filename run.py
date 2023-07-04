@@ -27,17 +27,14 @@ def render_digest(context: dict, output_dir: Path) -> None:
     output_file_path = output_dir / 'index.html'
     output_file_path.write_text(output_html)
 
-
-def run(
+def fetch_content(
     hours: int,
     scorer: Scorer,
     threshold: Threshold,
     mastodon_token: str,
     mastodon_base_url: str,
-    mastodon_username: str,
-    output_dir: Path,
-) -> None:
-
+    mastodon_username: str
+) -> list[dict]:
     print(f"Building digest from the past {hours} hours...")
 
     mst = Mastodon(
@@ -55,6 +52,24 @@ def run(
     threshold_boosts = format_posts(
         threshold.posts_meeting_criteria(boosts, scorer),
         mastodon_base_url)
+
+    return threshold_posts, threshold_boosts
+
+
+def run(
+    hours: int,
+    scorer: Scorer,
+    threshold: Threshold,
+    mastodon_token: str,
+    mastodon_base_url: str,
+    mastodon_username: str,
+    output_dir: Path,
+) -> None:
+
+    threshold_posts, threshold_boosts = fetch_content(
+        hours, scorer, threshold, mastodon_token, mastodon_base_url,
+        mastodon_username
+    )
 
     # 3. Build the digest
     render_digest(
@@ -93,10 +108,10 @@ if __name__ == "__main__":
         choices=list(scorers.keys()),
         default="SimpleWeighted",
         dest="scorer",
-        help="""Which post scoring criteria to use.  
-            Simple scorers take a geometric mean of boosts and favs. 
-            Extended scorers include reply counts in the geometric mean. 
-            Weighted scorers multiply the score by an inverse sqaure root 
+        help="""Which post scoring criteria to use.
+            Simple scorers take a geometric mean of boosts and favs.
+            Extended scorers include reply counts in the geometric mean.
+            Weighted scorers multiply the score by an inverse sqaure root
             of the author's followers, to reduce the influence of large accounts.
         """,
     )
