@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mastodon_digest"
+version = "0.1.0"
+description = ""
+authors = ["Matt Hodges, Mau Foronda, Andromeda Yelton"]
+license = "BSD 3-Clause \"New\" or \"Revised\" License"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Jinja2 = "3.1.*"
+"Mastodon.py" = "1.8.*"
+scipy = "1.9.*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
