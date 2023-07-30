@@ -1,6 +1,7 @@
-name: My Mastodon Digest 
+name: ICYMI_GLAM
 on:
   schedule:
+    # Twice daily, at 1000 and 2200.
     - cron: '0 10,22 * * *'
   workflow_dispatch:
 jobs:
@@ -9,28 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@3
         with:
           ref: main
-      - name: python setup
-        uses: actions/setup-python@v2
+      - name: setup python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-      - name: python things
+          cache: 'poetry'
+      - name: install deps
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          poetry --version
+          poetry install
       - name: run digest
         env:
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           MASTODON_BASE_URL: ${{ secrets.MASTODON_BASE_URL }}
           MASTODON_USERNAME: ${{ secrets.MASTODON_USERNAME }}
         run: |
-          python run.py -n 12 -s SimpleWeighted -t lax
-      - name: publish
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages
-          build_dir: render
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          poetry run python run.py -n 12 -s SimpleWeighted -t lax
