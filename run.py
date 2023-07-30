@@ -22,30 +22,17 @@ if TYPE_CHECKING:
 
 load_dotenv()
 
-def render_digest(context: dict, output_dir: Path) -> None:
-    environment = Environment(loader=FileSystemLoader("templates/"))
-    template = environment.get_template("digest.html.jinja")
-    output_html = template.render(context)
-    output_file_path = output_dir / 'index.html'
-    output_file_path.write_text(output_html)
-
 def fetch_content(
     hours: int,
     scorer: Scorer,
     threshold: Threshold,
-    mastodon_token: str,
-    mastodon_base_url: str,
+    client: Mastodon,
     mastodon_username: str
 ) -> list[dict]:
     print(f"Building digest from the past {hours} hours...")
 
-    mst = Mastodon(
-        access_token=mastodon_token,
-        api_base_url=mastodon_base_url,
-    )
-
     # 1. Fetch all the posts and boosts from our home timeline that we haven't interacted with
-    posts, boosts = fetch_posts_and_boosts(hours, mst, mastodon_username)
+    posts, boosts = fetch_posts_and_boosts(hours, client, mastodon_username)
 
     # 2. Score them, and return those that meet our threshold
     threshold_posts = format_posts(
@@ -64,29 +51,20 @@ def run(
     threshold: Threshold,
     mastodon_token: str,
     mastodon_base_url: str,
-    mastodon_username: str,
-    output_dir: Path,
+    mastodon_username: str
 ) -> None:
 
-    threshold_posts, threshold_boosts = fetch_content(
-        hours, scorer, threshold, mastodon_token, mastodon_base_url,
-        mastodon_username
+    client = Mastodon(
+        access_token=mastodon_token,
+        api_base_url=mastodon_base_url,
     )
 
-    # 3. Build the digest
-    render_digest(
-        context={
-            "hours": hours,
-            "posts": threshold_posts,
-            "boosts": threshold_boosts,
-            "mastodon_base_url": mastodon_base_url,
-            "rendered_at": datetime.utcnow().isoformat() + 'Z',
-            # "rendered_at": datetime.utcnow().strftime('%B %d, %Y at %H:%M:%S UTC'),
-            "threshold": threshold.get_name(),
-            "scorer": scorer.get_name(),
-        },
-        output_dir=output_dir,
+    threshold_posts, threshold_boosts = fetch_content(
+        hours, scorer, threshold, client, mastodon_username
     )
+
+    [client.status_reblog(post) for post in threshold_posts]
+    [client.status_reblog(post) for boost in threshold_boosts]
 
 
 if __name__ == "__main__":
@@ -113,7 +91,7 @@ if __name__ == "__main__":
         help="""Which post scoring criteria to use.
             Simple scorers take a geometric mean of boosts and favs.
             Extended scorers include reply counts in the geometric mean.
-            Weighted scorers multiply the score by an inverse sqaure root
+            Weighted scorers multiply the score by an inverse square root
             of the author's followers, to reduce the influence of large accounts.
         """,
     )
@@ -128,18 +106,7 @@ if __name__ == "__main__":
             strict = 98th percentile
         """,
     )
-    arg_parser.add_argument(
-        "-o",
-        default="./render/",
-        dest="output_dir",
-        help="Output directory for the rendered digest",
-        required=False,
-    )
     args = arg_parser.parse_args()
-
-    output_dir = Path(args.output_dir)
-    if not output_dir.exists() or not output_dir.is_dir():
-        sys.exit(f"Output directory not found: {args.output_dir}")
 
     mastodon_token = os.getenv("MASTODON_TOKEN")
     mastodon_base_url = os.getenv("MASTODON_BASE_URL")
@@ -158,6 +125,5 @@ if __name__ == "__main__":
         get_threshold_from_name(args.threshold),
         mastodon_token,
         mastodon_base_url,
-        mastodon_username,
-        output_dir,
+        mastodon_username
     )
