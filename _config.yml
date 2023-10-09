@@ -2,7 +2,7 @@ title: ICYMI_GLAM 🤖
 description: About the ICYMI_GLAM mastodon bot
 author: Andromeda Yelton
 
-theme: cayman
+theme: minima
 
 base_url: /
 repository: thatandromeda/mastodon_digest
