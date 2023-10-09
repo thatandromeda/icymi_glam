@@ -1,2 +1,10 @@
-theme: minimal
 title: ICYMI_GLAM 🤖
+description: About the ICYMI_GLAM mastodon bot
+author: Andromeda Yelton
+
+theme: minima
+
+base_url: /
+repository: thatandromeda/mastodon_digest
+
+github_username: thatandromeda
