@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 def fetch_posts_and_boosts(
     hours: int, mastodon_client: Mastodon, mastodon_username: str
 ) -> tuple[list[ScoredPost], list[ScoredPost]]:
-    """Fetches posts form the home timeline that the account hasn't interactied with"""
+    """Fetches posts form the home timeline that the account hasn't interacted with"""
 
     TIMELINE_LIMIT = 1000
 
@@ -28,7 +28,7 @@ def fetch_posts_and_boosts(
     total_posts_seen = 0
 
     # Iterate over our home timeline until we run out of posts or we hit the limit
-    response = mastodon_client.timeline(min_id=start)
+    response = mastodon_client.timeline_home(min_id=start)
     while response and total_posts_seen < TIMELINE_LIMIT:
 
         # Apply our server-side filters
@@ -54,10 +54,10 @@ def fetch_posts_and_boosts(
                 # Apply our local filters
                 # Basically ignore my posts or posts I've interacted with
                 if (
-                    not scored_post.info["reblogged"]
-                    and not scored_post.info["favourited"]
-                    and not scored_post.info["bookmarked"]
-                    and scored_post.info["account"]["acct"] != mastodon_username
+                    not scored_post.original_post.reblogged
+                    and not scored_post.original_post.favourited
+                    and not scored_post.original_post.bookmarked
+                    and scored_post.original_post.account.acct != mastodon_username
                 ):
                     # Append to either the boosts list or the posts lists
                     if boost:
