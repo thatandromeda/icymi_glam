@@ -1,5 +1,4 @@
 ---
-layout: page
-title: ICYMI_GLAM 🤖
+layout: home
 ---
 Content will go here.
