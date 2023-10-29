@@ -1,8 +1,8 @@
 name: ICYMI_GLAM
 on:
   schedule:
-    # Twice daily, at 1000 and 2200.
-    - cron: '0 10,22 * * *'
+    # Every 6 hours (4x daily).
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 jobs:
   update:
