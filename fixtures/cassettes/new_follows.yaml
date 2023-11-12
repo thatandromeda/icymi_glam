@@ -1,0 +1,838 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/instance/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Cache-Control:
+      - max-age=300, public, stale-while-revalidate=30, stale-if-error=86400
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:05 GMT
+      ETag:
+      - W/"9ded7167f4fb762d87a929eca29ad2a0"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '289'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.391015Z'
+      X-Request-Id:
+      - fe77faec-e8d8-4396-b9f1-887409781af3
+      X-Runtime:
+      - '0.020961'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Accept, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/accounts/verify_credentials
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8RW247jRBD9lcY87EtiO/HM5IKQBiEukZgnkBAwyCq3K3ZP2t2mL1mi0fwGr7zw
+        gXwC1b5kkmVmdxa0ICVKp7rudU7Z95Eoo3U0m6XLNLtYzC6ydLWcpat5NIm8RaOgQboX/NCIvJLQ
+        kBw4d2/KSmFbCYd80N98/sPNJv/qm89uWKEd+/P3P34jJan5DincFqTFSUQ30doZj50513s0UEgy
+        V17KSVQZ7dujMjcIDsscQuh5Os+m6WKapd+l6br7xGma/kgxlHYhgVufphlvux/8WnzENuE4v/o4
+        W33SMGBbI1CV8tCl52pwzNZg0NJZqMqyAumHOZCUMINCe8eEoktkUhQGzIFx3TReCXeI2ZdaSv2a
+        NchAlaeRpGRgd6xF0whrhSYPmm177YP2rAC+mzCr2YZxUEwiGMUabXAIGeJxragxFlwwLz27097E
+        7FtE1hzYayyYFQ7JqWElOhDSxn3tyVB8GKSR1JLaudaukyRMrDGxt8n12Qi9EU9qBRjY5BwBe3Bg
+        TrR5qeIGrNNxra0bjMmWoKK9cnToLGxCQEsIaQlBLSGsJQS2hNCWaCMqoUAmWbGAWXGxxavl6mIB
+        y/iuxeoYMreOGsH/08g1QonvVWxv8YKQK44Z4CW/5NtlNl+8EfIfFPuvI/fgJBd55zFaz0YZ8WGU
+        pZMopEbAOKotid2UWN7LT1g6m03TecdLoUr89chnSzDmxNT7qDViD/xABq0vJNVLl6gI1WKPR3UJ
+        qvJQHZfDQPOO2a8+NKFf/T88DuMQKEsbrX+6j4bNegNC0bWiKooDaexB+iC/DjVTtkY3WMK1rkHE
+        VnMBMiihEeSq356hgQ+To8Pvh9Anvka4nbmMK+FqX8RCn+yC5B3Ov6DLMBK9O3G/cZaZnlRPWf88
+        Ii43+ItH6+wJ7mpRIv2VEnlopB3x8NQDpANcL+hQ9DCJsNF3IvSTghgtcTi+vM39brUtTZkT4O2n
+        t1E95WDK24g5A8pKekqRUOnbXhd7C2C1wW3QHnp7MqDkfHbkaXTtp7S6CYYq1Do6vH7MoRc8O/nh
+        QfCoOQjg7N/j9fsj5ZniXgCc0C8wFToyywui944kBmXXu4FaSusWFRo6kH80ho4NvqPTZ7MRai+s
+        IAiMOmOGz7TmzBilFK0VdrR9e1Uv8fi3dPpWvH1MH4ZiAf1h+3avf9PVKqzo3iGdHhcdkSK6urzM
+        rkhKtNOmV6hFVUv6uuPr3MPDXwAAAP//AwBSxq7PSwoAAA==
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:05 GMT
+      ETag:
+      - W/"13a56abebad6ec52987db5d965efdb3c"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '288'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.523385Z'
+      X-Request-Id:
+      - faaf187e-6698-4a6b-870c-5f7d9d3e98d7
+      X-Runtime:
+      - '0.017123'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/accounts/110803471430981092/following
+  response:
+    body:
+      string: '[]'
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2'
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:05 GMT
+      ETag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '287'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.645895Z'
+      X-Request-Id:
+      - 8f55eaf1-aed7-4e96-b808-bac28f2d4a60
+      X-Runtime:
+      - '0.011010'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/accounts/110803471430981092/followers
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8RX247bNhD9FVZ9aYFdSbbXVyBA8pYC7VPy0mYLY0SOJK4pjkBSdt289Df6e/2S
+        jixbXudmIS0cYIEVh8M5c4Yc8vjd+0iraBWN0uV8/jBOl5PFbDGep7NZdBc1Hp2FCnk+lBDAKkcV
+        KuApkDJ8aH5JJejYk9Rg2EVpXxvYr48RXp3cxK9oAln2MCQ3yOg5GI93UUah/+bFkrboIDPYGwtH
+        Td2PpEMIqNbQJjJOx5P7dHQ/Xr5N09XhL07T9DdGsRRa/McmTSeyPvzD1/o78dM/f/1diVCi8Jyh
+        uKAi9tSICvZiY2kncjYKZNBdiQ4FWaMtxuJNaJRGJbrIIEqH+YvHqAyh9qskeVaNJEDhkwpC+RgJ
+        acB79qvQBk1WlOBLnucZh4btlnIyhmEtUY0WHX9wZHQOHTsFcAUG9ltnBuzmsSOG33dZ+BpsZzig
+        HWzJ2Xg0QDe642BNUYbBDH6GoO3tKHRwX+YgAolKK2V4G2VJZERGe8/MHPAmKQFewGB+RmcOnIYb
+        cjxDXtsrtIr5NLXYOc11KQaz8pSHHTi8Hake8cre5eR4d7bMH8NeUC6O1UDeNMt7p55AcqaCXAFW
+        /wltzj4Wb0um7w8NvOV2zDx6z6Vp7wuhrTSNQs7b1o5yHUTR2i1YyTUcWrIdau4Lo/O20Ler2yXs
+        tQMxlMzG6nBbHj3i/0XBc7CbMjgBXiNQ7YWEwPdNe16HsuFn0aK/HZkj3pVm/GFHbtPeK54RDbej
+        bdnV2lDgRvPcm9yLHn+MxS/guEcVs+d3ke9fEAHRQoGOb6k/gsMKD+vbZ/LY44Y4cNAVP5tDq6Rt
+        cKQa2VbmdrW6QP1yxY6jo6Ro9ZIzLDQ+Rejlh/qpcfozrq3o8slHemvLY/dsiVQ2rsAHikvyISkM
+        VJVrfCJBlpiwPKPGBp9063zC+i5hgZewwktY4iWs8RIWeQk5zeecYSeL+XS2nGI2lxP1kE/jpxqL
+        HnjtA1++8hvglwgKv4J4t24AcD6ZZFM5Go0fUC6zB7wE/mri/xm/O80cYn2IGK3mi8XJyl16ss6m
+        6V3UJsnnpncdjyYjltec5bqbeiaSR6P70ZjjY0VP2kerd79zVI1Gtd/vo6Naf6NDe6K3YJqzeP6o
+        Z/sTuj9I+lhS9alWG9ihDqw3LOkPrqcGPfdnfwNou9Ve8w+Dk88pnc/068Xi05pz6v8CAAD//0I4
+        nQjtGHYTKCNAYZhalAkM4BS0ODAIMbS0MjC3MjXVMzE00gZ3WZRqdeAx4J5Z4lGaRDgO0jNLMkqT
+        QO5HLTTIDXZcJSWtIgKn++kQG3mlOTm1sbWxAAAAAP//AwCzvnnGBg8AAA==
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:05 GMT
+      ETag:
+      - W/"b37fbaca9e5453a2f6b7278eea86d429"
+      Link:
+      - <https://glammr.us/api/v1/accounts/110803471430981092/followers?since_id=121819>;
+        rel="prev"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '286'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.765288Z'
+      X-Request-Id:
+      - 2cbdf290-6d80-47a6-ae77-5412fa0a414d
+      X-Runtime:
+      - '0.019710'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: status=%F0%9F%91%8B+Hi%2C+%40thatandromeda%40ohai.social%21+Thanks+for+following+me.+I+aggregate+things+that+GLAM+people+are+talking+about%2C+in+case+you+missed+it.+You+can+help+me+get+better+at+it+by+letting+me+read+your+timeline%3B+details+in+my+bio.+To+permit+this%2C+send+me+a+message+that+includes+my+username+and+the+phrase+%27I+consent%27.&visibility=direct
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '364'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Idempotency-Key:
+      - do_not_spam_follow_thatandromeda@ohai.social
+      User-Agent:
+      - mastodonpy
+    method: POST
+    uri: https://glammr.us/api/v1/statuses
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8xWS2/cNhD+K4x6tSWtdu19BAVcFG2zQH2KgSKtA2EkzUr0UqRAUk4Whn9BT730
+        mkt/YH5Ch3rsSl47sVugKOCHOJz3fDPDO49n3sqbTCbT5WIeRWfLaBbOZ7Old+KlGsFiFoMljiiM
+        pqeTyekkuprMV1G4Cpf+Yj75lfi4jDVWYhdbFTttshZiTIU0VbW0g1uD0nDLb9FbbUAYJEqluEAd
+        W/zo7JHeW254wgW3OzpnXGNqiSpA5jXkJOihpHOtOX0W1lZmFQS5gLLUfm2C2qA2AU93JY8dNTAW
+        LBFN8GiwtRaPqrkYaHhU0AXJ0cRNhN4qdJREqHxI2cCtIj/tiA0z3me3zcmeK9snpVWVDyhlPbxP
+        lNqWoLcDUqqkRWfCu67DcJpWzT/8/OmP39kbfsJaqqlAslSAMd9ee8VpCjq79pjVII2gohNRqutW
+        A7YSwAqNG8fd5UgVwH2jUg4iuLAFWJCZViVmQJp61fUpJZaV5BBXsld4cfChJYylm8vgcNsRYHQ6
+        XL9iVwXIrWEbpelXCPWBy5xs+mzNIM815hQRswVRDXOm2E8/f3fJKlSVQAaa7kBsnQwkqrYnjFNq
+        wCDbqZqV3BjMGLc+e0fHlNJWoKhIPcvRsgStRc1IJ6fDjgk6t9YZdU/mVGhmeYmCS3zNMrTAhXEW
+        yh1LuPLZlSJPdEni5KE5YdQZmRMH+mMMAb11mctU1BkaJ+egLcHxEKstkFWFdv66fETn30yXr9eM
+        YECa7IHkd4nr8EDI3XBBvjvo/Pa+h1qPRagI1Sm4qnmrO89ZI0QdeoHEP2BCLYytxD2JpB227/qZ
+        Ei7C6Ww+mU3D5WISLiPXZp3rD5WRsH1Iy7ipBOzijn/9/bvLddyULlGWff70159uHKh0O2oIUmN1
+        jY14qm5RQyKwDyvXqq4OrXI04ML56TS8Cmm6uR8/DEM34KRyYY776Q1/xdaH7JZUr43mVDuxa9xr
+        imYKQpfpoZegQ4bDGgGqgZrDgauf4IkGvaOilWUtaeD57McGyKwr8sCSEAzMtsWMMVQfZlUH+waw
+        CaRbQpEi8DuwCgRNYFOE8taks0fgoMSYprwsq9kNodRnbxEduqiuzBW26acOsMfgeca8fMFwdgi4
+        pRmgB9xpJv0SjFV+oYzthEm2wxl9NBJunocBIS0gqAWEtYDAFhDaAqV5ziVNp2kyh0ky2+D5Yjmb
+        w8K/qTDfm4zdYuDpf2q5oNmALwq2lXiGyWWKU8Cz9CzdLKbR/IHJfxDsv7bcgpNU9Mtv0tOoHwYL
+        sV/QPWnhlr2xcUsfP0PCqOlLLjP8uO9nLNUNN904UwK7zw1Hkbnv/Ry7BC4J15L6MNm5lwaI+tDh
+        /+PdeDFQ/NI96eJEzSkbh0fH/ck+J790bX+UjqPgRh75ObdFnfhcDd9aLl+gaUGSWJzQk21LFI2i
+        yV03rKRSFUpanpKG0wa1ps8Sv5LpUW24bJ6IAnue3sMnUjMSRiF4ZbjpZb8c1XM0HrnTpuLLZfpK
+        VX6gS7dQ1HZQl7U1zeuCJshj0u9pGVMQHIhkIS0cwrpW6MDWNkO7pcPlfD6LwuV0cb6I5uH5+XhL
+        j9JyNPefxvlhpz8JYO+ePLKQd74Nu9f1XL+zK4JLF9nfAAAA//8DAP/PS06uDAAA
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:05 GMT
+      ETag:
+      - W/"9929275064f13bfc7906f1986659816f"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '285'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.893781Z'
+      X-Request-Id:
+      - e17377db-93f7-495f-9a58-1c83e1553861
+      X-Runtime:
+      - '0.036435'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/notifications?types%5B%5D=mention
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8RX247bNhD9FUZ5SYFdXSzLN6BA+tYC7VP2pckWxogcSVxTpEBSdt289Df6e/2S
+        DC2td51tYiMtXMCAxdFwzpwhhzz68DGSIlpFRV7M80l0E/l9hzRuUXtpNBm4RfAo1uDJPEkn+W2W
+        3qaLu6xYTYrVdBZns+I9+QHnptfkNEbM0uV8Pp2ky3wxW0zm6WxGTr1Dq6ENCL4BD1pY06KAYb7/
+        3PzWNCBjZ7gERS5Cuk7Bfj1G+OHRjf2Kyh+SVYZvkNArUA5votL44zNN5maLFkqFR2NtTd8dRy+p
+        ptntZHmXpqvDL07TNFDVxgf8+z5Nc94d/vBH+Yr99Peff7XMN8gcZchOqLC96VkLe7bRZscqMjIk
+        0F2DFpnRSmqM2TvfC4mCDZGBNRar7++jxvvOrZLkWTUSD7VLWvDNfcS4AufIb1w01oBr6D29sajI
+        rk1llCJYbUyHGi09UGS0Fi05ebA1evJblwr05n4ghq+HLFwHejAc0A625Mk4GmAY3VCwvm78xQx+
+        Bi/19SgMcF/nwLxhrRRC0TLyxhjFSrN3xMwCLZJg4BhczE/J0oKVcEWOT5Dn1gq1ID59x3ZWUl3q
+        i1k5U/kdWLweqSPimbWrjKXV2RJ/9HtmKjZWA2nRNK2deABOmTJja9DyDwg5u5jdNUTfHRp4S+1Y
+        OnSOShPOCyY1V71Aylt31lTSszrYNWhONby0ZDuU1BdKVqHQ16vbKey5DXEpmY2W/ro8joj/FQVH
+        wa7K4BHwHIF2zzh4Om/Cfr2UDV2LGt31yIx4Z5rxzc7YTThXHCEqakcd2HVSGU+N5qg3qRcdfhez
+        X8BSjwpiT/cinb/APKKGGi2dUr97iy0e5odrcuxxZSiwly1dm5dWSWpvjeh5qMz1anWC+vWKjaNR
+        UgS9ZBUJjX8i9PZz/dRb+QXXILpc8kJvbWlsn03hQsctOG/ixjif1Ara1vYu4cAbTEZ555JhnktI
+        3yUk8BJSeAlJvIQ0XkIiLzFW0j4n2HwxL2bLAss5z8W0KuKHDusj8Np5Onz5/4DfIAj8BuLDvAuA
+        qzwvC55lkynyZTnFU+BvJv6v8YfdTCHWo1KfLxaPVurSR+usSG+ikCTtm6PrJMszkteU5Xp49fx7
+        ILvNwqcDtuZBumj14TeKKlGJ8PwxGtX6O+nDjt6C6p/E84uePe7Q/UHSx9y0p632CQAA///sWE1T
+        gzAQ/Ssdr9qWqpHSU2/q3avDQKF0xzQ4IXSmh/53d6EhQWBodfSUI0uS3ezm7ceroXYhQmUkCo4t
+        fbVUA9Tgs8kAIA5QAA4Geo02ZwCvrc16T5/pF2zv6B7JEeTDVAI6OPkWA+9tEaw8f8XY7HFxf1uN
+        LDenuyYCz6Beyng8BhmoXRmT/e2k8VO3D2XKvwrEoP3/EA1Rcn56P2kAmWkY4YjTY7AIPLb0cNr2
+        xkdrpudNEKHEknsMVR7SaaSkLT0nCetvgZUVm/qDmXWLzxw45h+FBRX1keV0VeCgjvidgExxAieQ
+        i6zE0ouyVFxbWOY6ccybGy99n7En/yG4op7176brgslJHklinme2ZBsdcrRYtZalCSgrQNYqwxXU
+        R2WWZF+qFpeQf+wjadMLm1yolFS0qYCeZ7WbbiKZjKSkLhCrSjDDUrCGzXEPIQmsxqWcoj8n5/bl
+        l23LutO2GI0XNS3m9+R1gp7BB6g6/cwWuEoluZCKRO1yHRNHIDkCyRFIjkByBJIjkByB5AgkRyA5
+        AqlL4HwBAAD//xodQBodQBodQBodQBr2A0hACzMTgUIlwEwMqmCg+QJa10ByBnRoycDCwNjE3NDE
+        2MDSApi5jVD7yYiOPEZ9gHWAAdGVRhKrBVoNqgIhjkDOqKCBDVgXvgAYq1Av1MYCAAAA//8DAFop
+        BVZbIgAA
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:06 GMT
+      ETag:
+      - W/"48a68010fa813b537bc11d8d5914e026"
+      Link:
+      - <https://glammr.us/api/v1/notifications?max_id=535732&types%5B%5D=mention>;
+        rel="next", <https://glammr.us/api/v1/notifications?min_id=535732&types%5B%5D=mention>;
+        rel="prev"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '284'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.040588Z'
+      X-Request-Id:
+      - 043e91fb-4084-4907-ba9e-4da4a978886b
+      X-Runtime:
+      - '0.034625'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: status=%F0%9F%91%8D+Thanks%2C+%40thatandromeda%40ohai.social%21+I%27ll+read+your+timeline+now.&visibility=direct
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '112'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Idempotency-Key:
+      - do_not_spam_ack_thatandromeda@ohai.social
+      User-Agent:
+      - mastodonpy
+    method: POST
+    uri: https://glammr.us/api/v1/statuses
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA8xVS2/jNhD+K1P1GuuZxI+iQIoCbQM0p+bSbQphRI1txhQpkJSzRrA/oYdeet3L
+        /sD9CR1akh/ZHHZboChgwNQ3L87MN8PnSNbRIsqyrJjPpnl+nRX5/Oo6vYouImEJPdUletbI07yY
+        ZNkky++z6SJPF1kaZ7P5G9aTurTUql3pTRm86U6pcxSFMJ32J1JH2kkvtxQtlqgcMdIaqciWnt6G
+        eOx3K52spJJ+x9+1tCQ8owr1qsMVG0ak+buzko9r71u3SJKVwqaxceeSzpF1iRS7RpYBTZxHz6BL
+        Xk22s+pVNzcnHl41DElKcuU+w2iRBqRSZnWKLHFr+J7+TI1qOVa3r8lBqz4UpXe1OkGa7lReGbNp
+        0G5OIGG0pxAieujStBDt/o8+vv/zD7hfo964C+glrkUNQqFz3z5E64lAWz9E4C1qp7jxDGrz0Huh
+        3gJhbWkZtIc6mTXK2BkhUSU3fo0edW1NQzWyp9F1N+HiQsOXkkaPDm+Od+iBc+u9MDlKBwDPvo7i
+        r+A2HPLrr4v5N0oBM7eGHVcTvGxISU2gzVM82A0l4eYtpfJkQ/V++32s9tgObLmxAsOlo8VzpLEJ
+        nDvSgc2fqGIWU2/xjk3E0N7ncazSWVpcTrPLIp3PsnSeB6YxMV9zxsb+JVZL1yrclYP+7fe/3t2W
+        P/783R1UxsPH9x/+ChNhxOaME+zG24725sJsyWKlaExrZU3XHtnyyYyn00mR3qfpYv+L0zQNM65N
+        SPOcUj/Js7I3gLC0knStdvvrhY6CW6Mlx2epVw4q4j/wqPjCgJXpPEjNQgIlK4t2B8I0Tad55mP4
+        wShlnpg4wLx40WB0G2jJNtI57g94A8tem5sOFYrNBTgDtyCY4orQamiMpSFkiMdjwoVx+/ZC3cEj
+        kyWGX4ig2QH3FUJj2amFmjxK5T4lz2esjC/YT4EBWx4Be6Itah036LyJ18b5wZhtB57xYW8RVlqa
+        MNMSplrCXEuYbAmzLTFWrqTm4SyqKWbV5ZKuZ/PLKc7ix5ZWh5Bl2I1S/KeR1zyi9EXJ9hafEXIu
+        qEC6EldiOSvy6YuQ/yDZfx25Jye7GPd/NmI8DydvwvhGjdAsvHfOlz1+/hKn+X4upa7p7WGeqTGP
+        0g3rzCgajktJqg7nwx67Q6mZ15rnsNqFxxZVd5zw//HTcBMc/w0AAP//lFZLDoIwEL2La2MIGj4H
+        cOEJXBlTzAQmVEpKXXJ3pzAVmgrormk7k3lvPm/Y8b8yYXGCRmJj0t1+/+Hkym0f0BGA8yI6lGiq
+        V3FANV83LF9Cl2DI7F7Q1lLTjQY5cMfDqlGqhQY0Hcg/aE3HJ2ww7eUGm2FLkuD+uAgXqPGMQUps
+        O+yc7TqqXzwG4YxUrKdpIytnerSCoupZXi6mG0SeJsg36xuJMYFAQVdGPCpbYdwKXGxjM4wqHeVp
+        eoqj/JglWZxGSeKrtEdLMPeX63zS9MUC3vUUkRElxzbvXttzTrNbKhdG9gYAAP//AwCXkXuksQsA
+        AA==
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:06 GMT
+      ETag:
+      - W/"a2162a1862fbe0de5ffde02571ca95c3"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '283'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.190680Z'
+      X-Request-Id:
+      - 8e3545d3-afc7-4aa8-bd08-8993ef9c9f7b
+      X-Runtime:
+      - '0.037790'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/filters
+  response:
+    body:
+      string: '[]'
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2'
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:06 GMT
+      ETag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '282'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.329982Z'
+      X-Request-Id:
+      - 6e224e64-6b55-41ca-936e-8bc4147fcce2
+      X-Runtime:
+      - '0.010582'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/timelines/home?min_id=111395902980096000
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:06 GMT
+      ETag:
+      - W/"66de2cd546742427acd2ba7a8dc91e38"
+      Link:
+      - <https://glammr.us/api/v1/timelines/home?max_id=111398722592407449>; rel="next",
+        <https://glammr.us/api/v1/timelines/home?min_id=111398722613295605>; rel="prev"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Authorization, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '281'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.450127Z'
+      X-Request-Id:
+      - 9f2611c7-437d-460b-acd1-d3ff6f02668f
+      X-Runtime:
+      - '0.035111'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - XXXXXX
+      Connection:
+      - keep-alive
+      User-Agent:
+      - mastodonpy
+    method: GET
+    uri: https://glammr.us/api/v1/timelines/home?min_id=111398722613295605
+  response:
+    body:
+      string: '[]'
+    headers:
+      Cache-Control:
+      - private, no-store
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2'
+      Content-Security-Policy:
+      - default-src 'none'; frame-ancestors 'none'; form-action 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 12 Nov 2023 17:23:06 GMT
+      ETag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Referrer-Policy:
+      - same-origin
+      Server:
+      - Mastodon
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-RateLimit-Limit:
+      - '300'
+      X-RateLimit-Remaining:
+      - '280'
+      X-RateLimit-Reset:
+      - '2023-11-12T17:25:00.594330Z'
+      X-Request-Id:
+      - eefbaa65-bfbe-450c-a21d-41c81b9b8675
+      X-Runtime:
+      - '0.011684'
+      X-XSS-Protection:
+      - '0'
+      vary:
+      - Authorization, Origin
+    status:
+      code: 200
+      message: OK
+version: 1

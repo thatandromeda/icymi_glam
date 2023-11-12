@@ -20,25 +20,13 @@ if TYPE_CHECKING:
     from thresholds import Threshold
 
 # TODO:
-# For automated testing:
-    # Follow the bot and run script
-    # Confirm that you get a request for consent
-    # Send consent and run script
-    # Confirm that you get followed
-    # Rerun with -n 24
-    # Check for boost
-    # Unfollow and run script
-    # Confirm that you are unfollowed
-    # Add #nobot to profile
-    # Follow and run script
-    # Confirm that you are not followed or mentioned
-    # Remove #nobot
-# Deal with github deploy
-# Make info page (github pages)
-#  And link from profile
 # Deal with clever database stuff post-launch
+# Figure out what happens if your timeline gets large -- can you miss consent
+#   posts? Is it fine as long as you run more frequently?
 
 load_dotenv()
+
+client = Mastodon
 
 # Chad Nelson quite rightly points out that I can use git as a data store,
 # because...duh. (oooh, jsonata)
@@ -50,7 +38,7 @@ def fetch_content(
     hours: int,
     scorer: Scorer,
     threshold: Threshold,
-    client: Mastodon,
+    client: client,
     mastodon_username: str
 ) -> list[dict]:
     # 1. Fetch all the posts and boosts from our home timeline that we haven't interacted with
@@ -66,6 +54,7 @@ def fetch_content(
 def acknowledge_consent(client, mention):
     account = mention.account
     client.account_follow(account.id)
+    # This idempotency_key does not work and I do not know why.
     client.status_post(
         status=f"👍 Thanks, @{account.acct}! I'll read your timeline now.",
         visibility='direct',
@@ -73,7 +62,7 @@ def acknowledge_consent(client, mention):
     )
 
 
-def check_for_user_consents(client, followers):
+def check_for_user_consents(client, followers, following):
     mentions = client.notifications(mentions_only=True)
     for mention in mentions:
         print("______Checking notification for follow status")
@@ -85,7 +74,11 @@ def check_for_user_consents(client, followers):
             continue
 
         post = mention.status.content
-        if 'i consent' in post.lower():
+        # If we're already following them, it's implied that they have
+        # previously consented.
+        # This avoids the bug where we send the same person "i consent" every
+        # time the script runs, because their consent is still in our timeline.
+        if 'i consent' in post.lower() and mention.account.id not in following:
             acknowledge_consent(client, mention)
 
 
@@ -128,7 +121,7 @@ def handle_follow_asymmetry(client):
     print("__Checking new follows")
     check_for_new_follows(client, following, followers)
     print("__Checking user consents")
-    check_for_user_consents(client, followers)
+    check_for_user_consents(client, followers, following)
 
 
 def get_id_diff(include, exclude):
@@ -232,6 +225,32 @@ def run(
     [client.status_reblog(boost) for boost in consented_boosts if boost]
 
 
+def standardize_args(args):
+    # Duplicated to simplify standardize_args in test
+    scorers = get_scorers()
+
+    print("Fetching env")
+    mastodon_token = os.getenv("MASTODON_TOKEN")
+    mastodon_base_url = os.getenv("MASTODON_BASE_URL")
+    mastodon_username = os.getenv("MASTODON_USERNAME")
+
+    if not mastodon_token:
+        sys.exit("Missing environment variable: MASTODON_TOKEN")
+    if not mastodon_base_url:
+        sys.exit("Missing environment variable: MASTODON_BASE_URL")
+    if not mastodon_username:
+        sys.exit("Missing environment variable: MASTODON_USERNAME")
+
+    return [
+        args.hours,
+        scorers[args.scorer](),
+        get_threshold_from_name(args.threshold),
+        mastodon_token,
+        mastodon_base_url,
+        mastodon_username
+    ]
+
+
 if __name__ == "__main__":
     print("Getting scorers and thresholds")
     scorers = get_scorers()
@@ -275,24 +294,5 @@ if __name__ == "__main__":
     )
     args = arg_parser.parse_args()
 
-    print("Fetching env")
-    mastodon_token = os.getenv("MASTODON_TOKEN")
-    mastodon_base_url = os.getenv("MASTODON_BASE_URL")
-    mastodon_username = os.getenv("MASTODON_USERNAME")
-
-    if not mastodon_token:
-        sys.exit("Missing environment variable: MASTODON_TOKEN")
-    if not mastodon_base_url:
-        sys.exit("Missing environment variable: MASTODON_BASE_URL")
-    if not mastodon_username:
-        sys.exit("Missing environment variable: MASTODON_USERNAME")
-
     print("Running the good stuff")
-    run(
-        args.hours,
-        scorers[args.scorer](),
-        get_threshold_from_name(args.threshold),
-        mastodon_token,
-        mastodon_base_url,
-        mastodon_username
-    )
+    run(*standardize_args(args))

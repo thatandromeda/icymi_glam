@@ -1,16 +1,21 @@
-A fork of [hodgesmr/mastodon_digest](https://github.com/hodgesmr/mastodon_digest) that
+Based on [Mau Foronda's fork](https://github.com/mauforonda/mastodon_digest) of [Matt Hodges' mastodon_digest](https://github.com/hodgesmr/mastodon_digest).
 
-- runs on github actions
-- renders mastodon posts without iframes
-- in a clean and responsive style
-
-![Mastodon Digest](howitlooks.png)
-
-[**see live** 🎉](https://mauforonda.github.io/mastodon_digest/)
+Rather than rendering a digest page, this powers a bot based on [@icymi_law](https://icymilaw.org/), but for the GLAM community. The bot lives at [@icymi_glam@glammr.us](https://https://glammr.us/@icymi_glam).
 
 ---
 
-> **Mastodon Digest** scans posts you haven't yet seen in your timeline, finds the most popular ones and shows them to you in a pretty page. 
+## Development
+
+Prerequisites:
+* set up a mastodon bot
+* create a mastodon token which can read and write your timeline
+* copy `.env.example` to `.env` and fill in the credentials with your own
+
+Install dependencies: `poetry install`
+
+Run tests: `poetry run python -m unittest tests`
+
+Run the bot from CLI: `poetry run python run.py -n 12 -s SimpleWeighted -t lax`
 
 ## To run your own
 
@@ -35,4 +40,4 @@ A fork of [hodgesmr/mastodon_digest](https://github.com/hodgesmr/mastodon_digest
                         Which post threshold criteria to use. lax = 90th percentile, normal
                         = 95th percentile, strict = 98th percentile (default: normal)
 ```
-4. Enable github actions under `Settings` → `Actions/General`,  run the action from the `Actions` tab and when it succeeds publish your digest by going to `Settings` → `Pages` and selecting to deploy from the `root` of the `gh-pages` branch. 
+4. Enable github actions under `Settings` → `Actions/General`,  run the action from the `Actions` tab and when it succeeds publish your digest by going to `Settings` → `Pages` and selecting to deploy from the `root` of the `gh-pages` branch.

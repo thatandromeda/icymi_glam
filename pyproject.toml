@@ -9,11 +9,14 @@ license = "BSD 3-Clause \"New\" or \"Revised\" License"
 python = "^3.9"
 Jinja2 = "3.1.*"
 "Mastodon.py" = "1.8.*"
-scipy = "1.9.*"
 python-dotenv = "^1.0.0"
 beautifulsoup4 = "^4.12.2"
+scipy = { version = "1.9.*", python = ">=3.9,<3.13" }
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev-dependencies.dependencies]
+vcrpy = "^5.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
