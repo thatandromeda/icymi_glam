@@ -64,9 +64,10 @@ def acknowledge_consent(client, mention):
 
 def check_for_user_consents(client, followers, following):
     mentions = client.notifications(mentions_only=True)
+    follower_ids = [follower.id for follower in followers]
     for mention in mentions:
         print("______Checking notification for follow status")
-        if not mention.account in followers:
+        if not mention.account.id in follower_ids:
             continue
 
         print("______Checking for consents")
