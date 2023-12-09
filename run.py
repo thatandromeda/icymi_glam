@@ -65,6 +65,7 @@ def acknowledge_consent(client, mention):
 def check_for_user_consents(client, followers, following):
     mentions = client.notifications(mentions_only=True)
     follower_ids = [follower.id for follower in followers]
+    following_ids = [follow.id for follow in following]
     for mention in mentions:
         print("______Checking notification for follow status")
         if not mention.account.id in follower_ids:
@@ -79,7 +80,7 @@ def check_for_user_consents(client, followers, following):
         # previously consented.
         # This avoids the bug where we send the same person "i consent" every
         # time the script runs, because their consent is still in our timeline.
-        if 'i consent' in post.lower() and mention.account.id not in following:
+        if 'i consent' in post.lower() and mention.account.id not in following_ids:
             acknowledge_consent(client, mention)
 
 
