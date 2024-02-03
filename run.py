@@ -176,8 +176,8 @@ def check_for_new_follows(client, following, followers):
                      "I aggregate things that GLAM people are talking about, "
                      "in case you missed it. You can help me get better at it "
                      "by letting me read your timeline; details in my bio. To "
-                     "permit this, send me a message that includes my username "
-                     "and the phrase 'I consent'."
+                     "permit this, reply to this post with the phrase "
+                     "'I consent'. (It may take me a few hours to respond.)"
                    ),
             visibility='direct',
             idempotency_key=f"do_not_spam_follow_{account.acct}"
